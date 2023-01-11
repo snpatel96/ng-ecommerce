@@ -9,13 +9,22 @@ import { Product } from '../models/product.model';
 export class StoreService {
   constructor(private http: HttpClient) {}
 
-  getAllProducts(limit = '12', sort = 'desc'): Observable<Array<Product>> {
-    return this.http.get<Array<Product>>('https://fakestoreapi.com/products', {
-      params: {
-        sort: sort,
-        limit: limit,
-      },
-    });
+  getAllProducts(
+    limit = '12',
+    sort = 'desc',
+    category?: string
+  ): Observable<Array<Product>> {
+    return this.http.get<Array<Product>>(
+      `https://fakestoreapi.com/products${
+        category ? '/category/' + category : ''
+      }`,
+      {
+        params: {
+          sort: sort,
+          limit: limit,
+        },
+      }
+    );
   }
 
   getAllcategories(): Observable<Array<string>> {
