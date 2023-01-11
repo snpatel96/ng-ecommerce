@@ -10,14 +10,7 @@ export class ProductCardComponent {
   @Input() fullWidthMode = false;
   @Output() addToCart = new EventEmitter();
 
-  product: Product = {
-    id: 1,
-    title: 'Snickers',
-    price: 150,
-    category: 'shoes',
-    description: 'Description',
-    image: 'https://via.placeholder.com/150',
-  };
+  @Input() product!: Product;
 
   onAddToCart() {
     this.addToCart.emit(this.product);

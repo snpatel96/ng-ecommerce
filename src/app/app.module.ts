@@ -23,6 +23,7 @@ import { ProductHeaderComponent } from './pages/home/components/product-header/p
 import { FiltersComponent } from './pages/home/components/filters/filters.component';
 import { ProductCardComponent } from './pages/home/components/product-card/product-card.component';
 import { CartComponent } from './pages/cart/cart.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { CartComponent } from './pages/cart/cart.component';
     MatBadgeModule,
     MatSnackBarModule,
     MatListModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
