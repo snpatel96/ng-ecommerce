@@ -1,4 +1,4 @@
-<mat-card [ngClass]="{ 'text-center': !fullWidthMode }">
+<mat-card [ngClass]="{ 'text-center': !fullWidthMode }" class="py-4 px-8">
   <div [ngClass]="{ flex: fullWidthMode }">
     <img
       [src]="product.image"
@@ -16,7 +16,9 @@
         <p *ngIf="fullWidthMode">{{ product.description }}</p>
       </div>
       <div class="flex justify-between px-4">
-        <span class="text-red-400">{{ product.price | currency }}</span>
+        <span class="text-red-500 font-bold text-lg">{{
+          product.price | currency
+        }}</span>
         <button (click)="onAddToCart()">
           <mat-icon class="text-gray-500">shopping_cart</mat-icon>
         </button>
