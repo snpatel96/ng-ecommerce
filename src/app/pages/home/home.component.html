@@ -13,36 +13,7 @@
     <mat-grid-list gutterSize="16" [cols]="cols" [rowHeight]="rowHeight">
       <mat-grid-tile>
         <app-product-card
-          class="w-full"
-          [fullWidthMode]="cols === 1"
-        ></app-product-card>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <app-product-card
-          class="w-full"
-          [fullWidthMode]="cols === 1"
-        ></app-product-card>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <app-product-card
-          class="w-full"
-          [fullWidthMode]="cols === 1"
-        ></app-product-card>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <app-product-card
-          class="w-full"
-          [fullWidthMode]="cols === 1"
-        ></app-product-card>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <app-product-card
-          class="w-full"
-          [fullWidthMode]="cols === 1"
-        ></app-product-card>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <app-product-card
+          (addToCart)="onAddToCart($event)"
           class="w-full"
           [fullWidthMode]="cols === 1"
         ></app-product-card>
